@@ -1,0 +1,136 @@
+/* Media Query */
+
+@media only screen and (max-width: 800px) {
+    html, body {
+        background: white;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+    
+    h1 {
+        background: lightblue;
+        margin: 0;
+        padding: 20px;
+        text-align: left;
+    }
+    
+    #appTitle {
+        margin: 0;
+    }
+    
+    #movieTitle {
+        margin: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    #moviePoster {
+        max-width: 40%;
+        margin-top: 3px;
+        margin-right: 24px;
+        width: 100%;
+    }    
+    
+    .ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
+        margin: 0 10px;
+    }
+    
+    #menu {
+        list-style: none;
+        border-bottom: 1px solid lightgrey;
+        font-size: 24px;
+        padding: 20px;
+        overflow: hidden;
+    }
+    
+    #watchlistMenu {
+        list-style: none;
+        border-bottom: 1px solid lightgrey;
+        font-size: 24px;
+        padding: 20px;
+        overflow: hidden;
+    }
+    
+    #actorDiv {
+        width: 100%;
+        padding: 0;
+    }
+    
+    #actors {
+        list-style: none;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    #actors li {
+        margin: 5px 0;
+    }
+    
+    img {
+        max-width: 50px;
+    }
+    
+    .watchlistButton {
+        background-color: #008CBA;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        min-width: 65%;
+        margin-bottom: 25px;
+    }
+    
+    .ui-listview>.ui-li-has-thumb>.ui-btn, .ui-listview>.ui-li-static.ui-li-has-thumb {
+        padding-left: 5.25em;
+    }
+        
+    a {
+        text-decoration: none;
+    }
+    
+/* FIX FOR FOOTER WHEN SEARCH BOX IS ACTIVE
+    .ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit {
+        position: fixed;
+    }
+*/
+    .slidedown.in {
+        animation-duration: 0ms;
+    }
+    
+    .slideup.in {
+        animation-duration: 0ms;
+    }
+    
+    #footerDiv {
+        background-color: lightblue;
+        border-color: lightblue;
+    }
+    
+    #footer {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    
+    #footer li {
+        float: left;
+        width: 25%;
+    }
+    
+    #footer li a {
+        display: block;
+        padding: 0;
+        background-color: lightblue;
+    }
+    
+    #footer img {
+        height: 50px;
+        vertical-align: middle;
+    }
+}

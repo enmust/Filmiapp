@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html manifest="manifest.appcache">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <script src="app/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/jquery.mobile.min.css">
+        <script src="app/jquery.mobile.min.js"></script>
+        
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!-- For iPhone -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon" href="icon_60.png">
+        
+        <!-- Android address bar color -->
+        <meta name="theme-color" content="#add8e6">
+        
+    </head>
+    <body id="body">
+        
+        <div id="home" data-role="page">
+            
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <h1 id="appTitle">Filmiäpp</h1>              
+            </div>
+            
+            <div class="ui-field-contain">
+                <input type="search" name="search" id="searchBox" placeholder="Find movies" onkeypress="pressEnterToSearch()" />
+            </div>
+            
+            <div data-role="main" class="ui-content">
+                
+                
+                <ul data-role="listview" id="menu" data-icon="false">
+                    <!-- Insert movies here -->
+                </ul>
+            </div>
+            
+            <div id="footerDiv" data-role="footer" data-position="fixed" data-tap-toggle="false">
+                <ul id="footer">
+                    <li>
+                        <a href="javascript:goBack();" data-transition="fade" data-direction="reverse">
+                            <img src="img/BackButton.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:reloadPage();" data-transition="fade">
+                            <img src="img/HomeButton.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page3" data-transition="fade" onclick="generateWatchlist()">
+                            <img src="img/WatchlistButton.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page4" data-transition="fade">
+                            <img src="img/InfoButton.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        
+        <!-- PAGE2 a.k.a specific movie page -->
+        
+        <div id="page2" data-role="page">
+            
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <h1 id="movieTitle">Movie Title</h1>
+            </div>
+            
+            <div id="moviePage" data-role="main" class="ui-content">
+                <p>This page is for a movie</p>
+                <a href="#home" data-transition="slide" data-direction="reverse">Back home</a>
+            </div>
+            
+            <div id="footerDiv" data-role="footer" data-position="fixed" data-tap-toggle="false">
+                <ul id="footer">
+                    <li>
+                        <a href="javascript:goBack();" data-transition="fade" data-direction="reverse">
+                            <img src="img/BackButton.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" data-transition="fade">
+                            <img src="img/HomeButton.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page3" data-transition="fade" onclick="generateWatchlist()">
+                            <img src="img/WatchlistButton.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page4" data-transition="fade">
+                            <img src="img/InfoButton.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        
+        <!-- PAGE3 a.k.a Watchlist -->
+        
+        <div id="page3" data-role="page">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <h1 id="appTitle">Watchlist</h1>
+            </div>
+            
+            <div data-role="main" class="ui-content">
+                
+                
+                <ul data-role="listview" id="watchlistMenu" class="ui-listview">
+                    <!-- Insert movies here -->
+                </ul>
+            </div>
+            
+            <div id="footerDiv" data-role="footer" data-position="fixed" data-tap-toggle="false">
+                <ul id="footer">
+                    <li>
+                        <a href="javascript:goBack();" data-transition="fade" data-direction="reverse">
+                            <img src="img/BackButton.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" data-transition="fade">
+                            <img src="img/HomeButton.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:reloadPage();" data-transition="fade">
+                            <img src="img/WatchlistButton.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page4" data-transition="fade">
+                            <img src="img/InfoButton.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- PAGE4 a.k.a Info -->
+        
+        <div id="page4" data-role="page" data-position="fixed" data-tap-toggle="false">
+            
+            <div data-role="header">
+                <h1 id="appTitle">User guide</h1>
+            </div>
+            
+            <div data-role="main" class="ui-content">
+                <p>While using this application you can use the search box to find your favourite movies and add them to your watchlist.</p>
+                
+                <p>Pressing the <b>Watchlist</b> button you can view your watchlist. </p>
+                
+                <p>To add a movie to your watchlist just click <b>Add to watchlist</b> button next to a movie. </p>
+                
+                <p>To remove a movie from your watchlist just click <b>Remove from watchlist</b> button next to a movie. </p>
+            </div>
+            
+            
+            <div id="footerDiv" data-role="footer" data-position="fixed" data-tap-toggle="false">
+                <ul id="footer">
+                    <li>
+                        <a href="javascript:goBack();" data-transition="fade" data-direction="reverse">
+                            <img src="img/BackButton.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" data-transition="fade">
+                            <img src="img/HomeButton.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page3" data-transition="fade" onclick="generateWatchlist()">
+                            <img src="img/WatchlistButton.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page4" data-transition="fade">
+                            <img src="img/InfoButton.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        <script src="app/app.js"></script>
+    </body>
+</html>

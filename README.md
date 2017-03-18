@@ -1,2 +1,2 @@
 # Filmiapp
-A small web application developed for mobile devices where you can browse movies and add them easily to your watchlist.
+A small web application developed for mobile devices where you can browse movies and add them easily to your watchlist. What is more every movie has a short summary, top actors and a trailer. While offline you are still able to use the app to see your watchlist and remove movies from it.
