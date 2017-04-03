@@ -1,4 +1,4 @@
-var apiKey = "f6e9099ea367aae389133db80fde6b80";
+var apiKey = "YOUR OWN API KEY";
 
 function goBack() {
     window.history.back();
